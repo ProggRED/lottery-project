@@ -156,8 +156,11 @@ export default defineConfig(({ command, isPreview }) => ({
     port: 8081,
     strictPort: true,
   },
-  resolve: { tsconfigPaths: true },
-  plugins: [
+resolve: { tsconfigPaths: true },
+ssr: {
+  noExternal: ["tslib", "@radix-ui/react-dialog"],
+},
+plugins: [
     pgliteBootstrapPlugin(),
     // Before tanstackStart so /auth/popup never falls through to the SPA.
     authPopupPlugin(),
