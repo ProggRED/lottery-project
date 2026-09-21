@@ -1,0 +1,131 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --color-card: var(--card);
+  --color-card-foreground: var(--fg);
+  --color-popover: var(--card);
+  --color-popover-foreground: var(--fg);
+  --color-primary: var(--accent);
+  --color-primary-foreground: var(--accent-fg);
+  --color-secondary: var(--raised);
+  --color-secondary-foreground: var(--fg);
+  --color-muted: var(--raised);
+  --color-muted-foreground: var(--fg-muted);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-fg);
+  --color-destructive: var(--danger);
+  --color-destructive-foreground: #fff7f7;
+  --color-border: var(--line);
+  --color-input: var(--line);
+  --color-ring: var(--accent);
+  --color-success: var(--ok);
+  --color-success-foreground: var(--accent-fg);
+
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius: 0.75rem;
+
+  --shadow-border: var(--elev);
+  --shadow-border-hover: var(--elev-hover);
+}
+
+:root {
+  --bg: #080b0f;
+  --fg: #f5f7fa;
+  --fg-muted: #8c96a3;
+  --fg-subtle: #6a7380;
+  --card: #10151b;
+  --raised: #151b22;
+  --line: color-mix(in oklab, var(--fg) 12%, transparent);
+  --accent: #b8ff62;
+  --accent-fg: #071006;
+  --danger: #ff6868;
+  --ok: #b8ff62;
+  --elev: 0 0 0 1px rgba(255, 255, 255, 0.08);
+  --elev-hover: 0 0 0 1px rgba(255, 255, 255, 0.14);
+}
+
+html.light {
+  --bg: #f3f4f6;
+  --fg: #101318;
+  --fg-muted: #69717c;
+  --fg-subtle: #8a929c;
+  --card: #ffffff;
+  --raised: #eef0f3;
+  --line: color-mix(in oklab, var(--fg) 12%, transparent);
+  --accent: #5a9c14;
+  --accent-fg: #f7fff0;
+  --danger: #d94848;
+  --ok: #3f7a12;
+  --elev:
+    0px 0px 0px 1px rgba(0, 0, 0, 0.06),
+    0px 1px 2px -1px rgba(0, 0, 0, 0.06),
+    0px 2px 4px 0px rgba(0, 0, 0, 0.04);
+  --elev-hover:
+    0px 0px 0px 1px rgba(0, 0, 0, 0.08),
+    0px 1px 2px -1px rgba(0, 0, 0, 0.08),
+    0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    min-height: 100dvh;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+.featured-wash {
+  background:
+    radial-gradient(
+      circle at 92% 0%,
+      color-mix(in oklab, var(--accent) 16%, transparent),
+      transparent 46%
+    ),
+    var(--card);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

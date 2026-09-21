@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "LUCKORA",
+      "hasCanvas": false,
+      "bodyTextLen": 890,
+      "bodyTextHash": "0d9e429c1a62e7f7d1bf47d7bce9ff6362f2b32269b71b2a7380ea6182f23025",
+      "bodyTextPrefix": "LUCKORA Home Lotteries Results My tickets COLLEGE PROJECT · DEMO",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "LUCKORA",
+      "hasCanvas": false,
+      "bodyTextLen": 842,
+      "bodyTextHash": "7fbac7cc55b773cb981598b9a067d018551afe7863431d2499876c4b4ff1259d",
+      "bodyTextPrefix": "LUCKORA COLLEGE PROJECT · DEMO Your luck. Your moment. Explore s",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
